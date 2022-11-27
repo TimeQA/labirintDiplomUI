@@ -21,6 +21,9 @@ def junitVersion = "5.9.1",
 
 
 allure {
+    report {
+        version.set(allureVersion)
+    }
     adapter {
         aspectjWeaver.set(true)
         frameworks {
@@ -29,7 +32,6 @@ allure {
             }
         }
     }
-
 }
 
 dependencies {
