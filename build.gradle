@@ -78,3 +78,37 @@ compileJava {
 compileTestJava {
     options.encoding = 'UTF-8'
 }
+
+task mainPage_test(type: Test) {
+    useJUnitPlatform{
+        includeTags "mainPage"
+    }
+}
+
+task formalise_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "formalise"
+    }
+}
+task addFavorites_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "addFavorites"
+    }
+}
+
+task addBasket_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "addBasket"
+    }
+}
+task subMenu_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "subMenu"
+    }
+}
+
+task all_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "all"
+    }
+}

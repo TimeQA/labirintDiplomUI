@@ -1,8 +1,10 @@
 package labirint.tests.ui;
 
+import io.qameta.allure.Owner;
 import labirint.tests.TestBase;
 import labirint.tests.ui.pages.MainPage;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -15,11 +17,13 @@ import java.util.stream.Stream;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
+@Owner("RomanovAleksei")
+@Tag("all")
 public class LabirintTestUIPO extends TestBase {
 
     MainPage mainPage = new MainPage();
 
-
+    @Tag("mainPage")
     @Test
     @DisplayName("Проверка главной страницы и наличие на ней элементов")
     void mainPageNotEmptyPO() {
@@ -28,7 +32,7 @@ public class LabirintTestUIPO extends TestBase {
             mainPage.healthCheck();
         });
     }
-
+    @Tag("formalise")
     @Test
     @DisplayName("Появление кнопки \"ОФОРМИТЬ\"")
     void appearanceButtonForOrderPO() {
@@ -43,7 +47,7 @@ public class LabirintTestUIPO extends TestBase {
         });
     }
 
-
+    @Tag("addFavorites")
     @DisplayName("Проверка добавления книги в раздел \"Отложено\"")
     @ValueSource(strings = {"Огненный поток", "1984"})
     @ParameterizedTest(name = "Проверка добавления книги в раздел \"Отложено\" {0}")
@@ -65,6 +69,8 @@ public class LabirintTestUIPO extends TestBase {
             mainPage.checkProductOnBasketOrFavoritesPage(bookName);
         });
     }
+
+    @Tag("addBasket")
     @DisplayName("Проверка добавления книги в корзину")
     @ValueSource(strings = {"Огненный поток", "1984"})
     @ParameterizedTest(name = "Проверка добавления книги в корзину {0}")
@@ -97,6 +103,7 @@ public class LabirintTestUIPO extends TestBase {
         );
     }
 
+    @Tag("subMenu")
     @DisplayName("Проверка drop-down menu на наличие разделов подменю")
     @MethodSource
     @ParameterizedTest(name = "Для меню \"{0}\" отображаются разделы \"{1}\"")
