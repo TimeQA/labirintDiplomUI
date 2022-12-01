@@ -15,7 +15,7 @@ public class TestBase {
     static void configure() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 //        Configuration.headless = true;
-//        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
@@ -28,6 +28,8 @@ public class TestBase {
         chromeOptions.addArguments("--disable-notifications");
         chromeOptions.addArguments("--lang=en-en");
 
+        Configuration.browserCapabilities = capabilities;
+
         if (System.getProperty("remote") != null) {
             Configuration.browserCapabilities = capabilities;
             Configuration.remote = System.getProperty("remote");
@@ -39,8 +41,7 @@ public class TestBase {
         AllureAttachments.addScreenshotAs("Last screenshot");
         AllureAttachments.addPageSource();
         AllureAttachments.addBrowserConsoleLogs();
-        if (System.getProperty("selenide.remote") != null) {
-            AllureAttachments.addVideo();
-        }
+        AllureAttachments.addVideo();
+
     }
 }

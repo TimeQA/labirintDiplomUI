@@ -18,11 +18,11 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 @Owner("RomanovAleksei")
-@Tag("all")
+
 public class LabirintTestUIPO extends TestBase {
 
     MainPage mainPage = new MainPage();
-
+    @Tag("all")
     @Tag("mainPage")
     @Test
     @DisplayName("Проверка главной страницы и наличие на ней элементов")
@@ -32,6 +32,7 @@ public class LabirintTestUIPO extends TestBase {
             mainPage.healthCheck();
         });
     }
+    @Tag("all")
     @Tag("formalise")
     @Test
     @DisplayName("Появление кнопки \"ОФОРМИТЬ\"")
@@ -47,6 +48,7 @@ public class LabirintTestUIPO extends TestBase {
         });
     }
 
+    @Tag("all")
     @Tag("addFavorites")
     @DisplayName("Проверка добавления книги в раздел \"Отложено\"")
     @ValueSource(strings = {"Огненный поток", "1984"})
@@ -69,7 +71,7 @@ public class LabirintTestUIPO extends TestBase {
             mainPage.checkProductOnBasketOrFavoritesPage(bookName);
         });
     }
-
+    @Tag("all")
     @Tag("addBasket")
     @DisplayName("Проверка добавления книги в корзину")
     @ValueSource(strings = {"Огненный поток", "1984"})
@@ -102,7 +104,7 @@ public class LabirintTestUIPO extends TestBase {
                 Arguments.of("Еще", List.of("CD/DVD", "Сувениры", "Журналы", "Товары для дома"))
         );
     }
-
+    @Tag("all")
     @Tag("subMenu")
     @DisplayName("Проверка drop-down menu на наличие разделов подменю")
     @MethodSource
