@@ -28,14 +28,19 @@ public class TestBase {
         chromeOptions.addArguments("--disable-notifications");
         chromeOptions.addArguments("--lang=en-en");
 
-        Configuration.browserCapabilities = capabilities;
+        if (System.getProperty("remote") != null) {
+            Configuration.browserCapabilities = capabilities;
+            Configuration.remote = System.getProperty("remote");
+        }
     }
 
     @AfterEach
     void addAttachments() {
         AllureAttachments.addScreenshotAs("Last screenshot");
         AllureAttachments.addPageSource();
-        AllureAttachments.addPageSource();
-        AllureAttachments.addVideo();
+        AllureAttachments.addBrowserConsoleLogs();
+        if (System.getProperty("selenide.remote") != null) {
+            AllureAttachments.addVideo();
+        }
     }
 }
