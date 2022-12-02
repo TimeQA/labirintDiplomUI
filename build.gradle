@@ -50,22 +50,11 @@ dependencies {
     )
 }
 
+
 tasks.withType(Test) {
     systemProperties(System.getProperties())
-    useJUnitPlatform {
-        if (System.getProperty("tag") != null && !System.getProperty("tag").isEmpty()) {
-            includeTags System.getProperty("tag")
-        }
-    }
-    if (System.getProperty("tag") == "UI" && System.getProperty("env") == "local") {
-        systemProperties += [
-                'junit.jupiter.execution.parallel.enabled'             : true,
-                'junit.jupiter.execution.parallel.mode.default'        : 'concurrent',
-                'junit.jupiter.execution.parallel.mode.classes.default': 'same_thread',
-                'junit.jupiter.execution.parallel.config.strategy'     : 'custom',
-                'junit.jupiter.execution.parallel.config.custom.class' : 'chitaigorod.helpers.CustomStrategy'
-        ]
-    }
+    useJUnitPlatform()
+
 
     testLogging {
         lifecycle {
@@ -74,6 +63,7 @@ tasks.withType(Test) {
         }
     }
 }
+
 compileJava {
     options.encoding = 'UTF-8'
 }
@@ -114,3 +104,5 @@ task all_test(type: Test) {
         includeTags "all"
     }
 }
+
+
