@@ -42,6 +42,5 @@ public class TestBase {
         AllureAttachments.addPageSource();
         AllureAttachments.addBrowserConsoleLogs();
         AllureAttachments.addVideo();
-
     }
 }
