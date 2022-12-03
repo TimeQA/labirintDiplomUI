@@ -39,6 +39,7 @@ public class AllureAttachments {
                 + "' type='video/mp4'></video></body></html>";
     }
 
+
     public static URL getVideoUrl() {
         String videoUrl = "https://selenoid.autotests.cloud/video/" + getSessionId() + ".mp4";
 
