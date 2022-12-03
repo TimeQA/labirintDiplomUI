@@ -35,7 +35,7 @@ public class AllureAttachments {
     @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
     public static String addVideo() {
         return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
-                + DriverUtils.getVideoUrl(DriverUtils.getSessionId())
+                + DriverUtils.getVideoUrl()
                 + "' type='video/mp4'></video></body></html>";
     }
 
