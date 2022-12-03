@@ -16,8 +16,6 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.openqa.selenium.logging.LogType.BROWSER;
 
 public class DriverUtils {
-    public static final Logger LOGGER = LoggerFactory.getLogger(DriverUtils.class);
-
 
     public static byte[] getScreenshotAsBytes() {
         return ((TakesScreenshot) getWebDriver()).getScreenshotAs(OutputType.BYTES);
