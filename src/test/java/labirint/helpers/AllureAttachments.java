@@ -1,14 +1,6 @@
 package labirint.helpers;
 
 import io.qameta.allure.Attachment;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.net.MalformedURLException;
-import java.net.URL;
-
-import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class AllureAttachments {
 

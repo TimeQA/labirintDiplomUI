@@ -1,12 +1,10 @@
 package labirint.helpers;
 
 import com.codeborne.selenide.Selenide;
-import labirint.config.WebConfigReader;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
 
 import java.net.MalformedURLException;
 import java.net.URL;
