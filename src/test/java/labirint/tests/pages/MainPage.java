@@ -1,4 +1,4 @@
-package labirint.tests.ui.pages;
+package labirint.tests.pages;
 
 
 import com.codeborne.selenide.CollectionCondition;
