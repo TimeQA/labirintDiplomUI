@@ -1,8 +1,7 @@
-package labirint.tests.ui;
+package labirint.tests;
 
 import io.qameta.allure.Owner;
-import labirint.tests.TestBase;
-import labirint.tests.ui.pages.MainPage;
+import labirint.tests.pageobject.MainPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -17,7 +16,7 @@ import java.util.stream.Stream;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-@Owner("RomanovAleksei")
+@Owner("Dmitrii")
 
 public class LabirintTestUIPO extends TestBase {
 
