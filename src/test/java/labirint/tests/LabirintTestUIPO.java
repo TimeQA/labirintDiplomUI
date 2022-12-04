@@ -17,7 +17,7 @@ import java.util.stream.Stream;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-@Owner("RomanovAleksei")
+@Owner("Dmitrii")
 
 public class LabirintTestUIPO extends TestBase {
 
