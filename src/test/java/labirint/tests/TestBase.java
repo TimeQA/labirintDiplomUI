@@ -2,24 +2,28 @@ package labirint.tests;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
-import labirint.config.BrowserWebDriver;
+import labirint.config.ConfigReader;
+import labirint.config.ProjectConfiguration;
+import labirint.config.web.WebConfig;
 import labirint.helpers.AllureAttachments;
-import labirint.tests.pages.MainPage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 
-import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static io.qameta.allure.Allure.step;
 
 public class TestBase {
+
+    private static final WebConfig webConfig = ConfigReader.Instance.read();
+
     @BeforeAll
-    static void setUp() {
-        BrowserWebDriver.configure();
+    public static void setUp() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+        ProjectConfiguration projectConfiguration = new ProjectConfiguration(webConfig);
+        projectConfiguration.webConfig();
+        projectConfiguration.apiConfig();
     }
-
-
 
     @BeforeEach
     public void addListener() {
