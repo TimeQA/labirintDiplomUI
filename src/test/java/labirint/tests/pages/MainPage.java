@@ -1,13 +1,11 @@
 package labirint.tests.pages;
 
 
-import com.codeborne.selenide.CollectionCondition;
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.ElementsCollection;
-import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.*;
 
 import java.util.List;
 
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
@@ -50,11 +48,6 @@ public class MainPage {
 
     private final SelenideElement myBasketTitle = $(".basket-page__title");
 
-//    public final MainPage openPage() {
-//        open(baseUrl);
-//
-//        return this;
-//    }
 
     public final MainPage healthCheck() {
         elementsOnPage.shouldBe(CollectionCondition.sizeGreaterThan(0));

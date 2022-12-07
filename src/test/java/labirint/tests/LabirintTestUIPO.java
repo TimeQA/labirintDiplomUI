@@ -27,7 +27,7 @@ public class LabirintTestUIPO extends TestBase {
     @Test
     @DisplayName("Проверка главной страницы и наличие на ней элементов")
     void mainPageNotEmptyPO() {
-        open("https://www.labirint.ru/");
+//        open("https://www.labirint.ru/");
         step("Проверка наличия элементов товаров на главной страцице", () -> {
             mainPage.healthCheck();
         });
