@@ -1,32 +1,35 @@
 package labirint.config;
 
-
-import com.codeborne.selenide.Browser;
 import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
-        "system:properties",
-        "classpath:${env}.properties",
-        "file:~/${env}.properties",
-        "file:./${env}.properties"
+        "classpath:config/web/remote.properties",
+        "classpath:config/web/local.properties"
 })
-public interface WebConfig extends Config {
-    @Key("browser")
-    Browser browser();
 
-    @Key("browserVersion")
+public interface WebConfig extends Config {
+    @DefaultValue("chrome")
+    String browser();
+
+    @DefaultValue("102")
     String browserVersion();
 
-    @Key("browserSize")
+    @DefaultValue("1920x1080")
     String browserSize();
 
-    @Key("baseUrl")
+    @DefaultValue("https://labirint.ru/")
     String baseUrl();
 
     @Key("isRemote")
     boolean isRemote();
 
-    @Key("remoteUrl")
+    @DefaultValue("")
     String remoteUrl();
+
+    @DefaultValue("")
+    String selenoidLogin();
+
+    @DefaultValue("")
+    String selenoidPassword();
 }
