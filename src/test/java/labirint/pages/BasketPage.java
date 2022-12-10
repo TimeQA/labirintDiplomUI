@@ -14,8 +14,8 @@ public class BasketPage {
     private final SelenideElement favoritesLink = $(".b-header-b-personal-e-icon-count-m-putorder");
 
     private final SelenideElement firstProductInFavorites = $(".icon-fave:nth-child(1)");
-    private final SelenideElement selectedProductInBasketOrFavorites = $(".need-watch");
 
+    private final SelenideElement selectedProductInBasketOrFavorites = $(".need-watch");
 
 
     public final BasketPage goFavoritesPage() {
