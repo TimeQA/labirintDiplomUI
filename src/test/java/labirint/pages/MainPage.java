@@ -5,8 +5,7 @@ import com.codeborne.selenide.*;
 import java.util.List;
 
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.$$;
+import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
 
@@ -18,6 +17,13 @@ public class MainPage {
 
     private final SelenideElement formaliseOrBasketButtonSomeProduct = $(".product-buy-margin:nth-child(1)");
 
+
+    public final MainPage openPage() {
+
+        open("https://www.labirint.ru/");
+
+        return this;
+    }
 
     public final MainPage healthCheck() {
         elementsOnPage.shouldBe(CollectionCondition.sizeGreaterThan(0));

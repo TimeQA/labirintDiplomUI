@@ -33,7 +33,7 @@ public class LabirintTest extends TestBase {
     void mainPageNotEmptyPO() {
 
         step("Открыть главную страницу", () -> {
-            open("");;
+            mainPage.openPage();
         });
 
         step("Проверка наличия элементов товаров на главной страцице", () -> {
@@ -47,7 +47,7 @@ public class LabirintTest extends TestBase {
     void appearanceButtonForOrderPO() {
 
         step("Открыть главную страницу", () -> {
-            open("");;
+            mainPage.openPage();
         });
 
         step("Добавление товара в корзину", () -> {
@@ -65,7 +65,7 @@ public class LabirintTest extends TestBase {
     @ParameterizedTest(name = "Проверка добавления книги в раздел \"Отложено\" {0}")
     void addBookBasketAndFavouritesPO(String bookName) {
         step("Открыть главную страницу", () -> {
-            open("");;
+            mainPage.openPage();
         });
 
         step(String.format("Поиск книги %s", bookName), () -> {
@@ -91,7 +91,7 @@ public class LabirintTest extends TestBase {
     @ParameterizedTest(name = "Проверка добавления книги в корзину {0}")
     void checkAddBookBasketPO(String bookName) {
         step("Открыть главную страницу", () -> {
-            open("");;
+            mainPage.openPage();
         });
 
         step(String.format("Поиск книги %s", bookName), () -> {
@@ -126,7 +126,7 @@ public class LabirintTest extends TestBase {
     @ParameterizedTest(name = "Для меню \"{0}\" отображаются разделы \"{1}\"")
     void actualCommonComplexAvtoRuDropMenuTestPO (String typeDevice, List<String> expectedTypeDevice) {
         step("Открыть главную страницу", () -> {
-            open("");
+            mainPage.openPage();
         });
 
         step("Проверка наличия элементов товаров на главной страцице", () -> {
