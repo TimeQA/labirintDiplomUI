@@ -1,6 +1,7 @@
 package labirint.tests;
 
 import io.qameta.allure.Owner;
+import labirint.pages.BasketPage;
 import labirint.pages.MainPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -21,6 +22,8 @@ import static io.qameta.allure.Allure.step;
 public class LabirintTest extends TestBase {
 
     MainPage mainPage = new MainPage();
+    BasketPage basketPage = new BasketPage();
+
     @Tag("all")
     @Tag("mainPage")
     @Test
@@ -69,15 +72,15 @@ public class LabirintTest extends TestBase {
         });
 
         step("Нажать на кнопку \"Отложить\"", () -> {
-            mainPage.addFirstProductInFavorites();
+            basketPage.addFirstProductInFavorites();
         });
 
         step("Переход на страницу \"Отложено\"", () -> {
-            mainPage.goFavoritesPage();
+            basketPage.goFavoritesPage();
         });
 
         step(String.format("Проверка наличия книги в разделе  %s \"Отложено\"" , bookName), () -> {
-            mainPage.checkProductOnBasketOrFavoritesPage(bookName);
+            basketPage.checkProductOnBasketOrFavoritesPage(bookName);
         });
     }
     @Tag("all")
@@ -95,16 +98,16 @@ public class LabirintTest extends TestBase {
         });
 
         step(String.format("Поиск книги %s", bookName), () -> {
-            mainPage.clickButtonAddedProductBasket();
+            basketPage.clickButtonAddedProductBasket();
         });
 
 
         step("Переходим в корзину", () -> {
-            mainPage.goBasketPage();
+            basketPage.goBasketPage();
         });
 
         step(String.format("Проверка наличия книги в разделе  %s \"Отложено\"" , bookName), () -> {
-            mainPage.checkProductOnBasketOrFavoritesPage(bookName);
+            basketPage.checkProductOnBasketOrFavoritesPage(bookName);
         });
     }
 
