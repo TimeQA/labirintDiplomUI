@@ -20,7 +20,7 @@ public class MainPage {
 
     public final MainPage openPage() {
 
-        open("https://www.labirint.ru/");
+        open("");
 
         return this;
     }
