@@ -19,6 +19,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 @Owner("Dmitrii")
+@Tag("all")
 
 public class LabirintTest extends TestBase {
 
@@ -26,7 +27,6 @@ public class LabirintTest extends TestBase {
     BasketPage basketPage = new BasketPage();
     SearchPage searchPage = new SearchPage();
 
-    @Tag("all")
     @Tag("mainPage")
     @Test
     @DisplayName("Проверка главной страницы и наличие на ней элементов")
@@ -40,7 +40,7 @@ public class LabirintTest extends TestBase {
             mainPage.healthCheck();
         });
     }
-    @Tag("all")
+
     @Tag("formalise")
     @Test
     @DisplayName("Появление кнопки \"ОФОРМИТЬ\"")
@@ -59,7 +59,6 @@ public class LabirintTest extends TestBase {
         });
     }
 
-    @Tag("all")
     @Tag("addFavorites")
     @DisplayName("Проверка добавления книги в раздел \"Отложено\"")
     @ValueSource(strings = {"Огненный поток", "1984"})
@@ -85,7 +84,7 @@ public class LabirintTest extends TestBase {
             basketPage.checkProductOnBasketOrFavoritesPage(bookName);
         });
     }
-    @Tag("all")
+
     @Tag("addBasket")
     @DisplayName("Проверка добавления книги в корзину")
     @ValueSource(strings = {"Огненный поток", "1984"})
@@ -120,7 +119,7 @@ public class LabirintTest extends TestBase {
                 Arguments.of("Еще", List.of("CD/DVD", "Сувениры", "Журналы", "Товары для дома"))
         );
     }
-    @Tag("all")
+
     @Tag("subMenu")
     @DisplayName("Проверка drop-down menu на наличие разделов подменю")
     @MethodSource
