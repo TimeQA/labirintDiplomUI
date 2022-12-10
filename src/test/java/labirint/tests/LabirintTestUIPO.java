@@ -1,8 +1,7 @@
 package labirint.tests;
 
 import io.qameta.allure.Owner;
-import labirint.tests.TestBase;
-import labirint.tests.pages.MainPage;
+import labirint.pages.MainPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;

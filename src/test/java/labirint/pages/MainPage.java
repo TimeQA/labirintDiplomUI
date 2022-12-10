@@ -1,11 +1,10 @@
-package labirint.tests.pages;
+package labirint.pages;
 
 
 import com.codeborne.selenide.*;
 
 import java.util.List;
 
-import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
