@@ -3,6 +3,7 @@ package labirint.tests;
 import io.qameta.allure.Owner;
 import labirint.pages.BasketPage;
 import labirint.pages.MainPage;
+import labirint.pages.SearchPage;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -23,6 +24,7 @@ public class LabirintTest extends TestBase {
 
     MainPage mainPage = new MainPage();
     BasketPage basketPage = new BasketPage();
+    SearchPage searchPage = new SearchPage();
 
     @Tag("all")
     @Tag("mainPage")
@@ -49,7 +51,7 @@ public class LabirintTest extends TestBase {
         });
 
         step("Добавление товара в корзину", () -> {
-            mainPage.selectProduct();
+            mainPage.clickButtonAddBasket();
         });
 
         step("Переход на страницу оформления товара по кнопке \"ОФОРМИТЬ\"", () -> {
@@ -68,7 +70,7 @@ public class LabirintTest extends TestBase {
         });
 
         step(String.format("Поиск книги %s", bookName), () -> {
-            mainPage.searchBook(bookName);
+            searchPage.searchBook(bookName);
         });
 
         step("Нажать на кнопку \"Отложить\"", () -> {
@@ -94,7 +96,7 @@ public class LabirintTest extends TestBase {
         });
 
         step(String.format("Поиск книги %s", bookName), () -> {
-            mainPage.searchBook(bookName);
+            searchPage.searchBook(bookName);
         });
 
         step(String.format("Поиск книги %s", bookName), () -> {
