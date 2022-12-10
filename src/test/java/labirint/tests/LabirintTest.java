@@ -18,7 +18,7 @@ import static io.qameta.allure.Allure.step;
 
 @Owner("Dmitrii")
 
-public class LabirintTestUIPO extends TestBase {
+public class LabirintTest extends TestBase {
 
     MainPage mainPage = new MainPage();
     @Tag("all")
