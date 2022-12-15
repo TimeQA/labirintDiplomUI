@@ -55,9 +55,9 @@
 ____
 
 ## <img src="images/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins job
-<a target="_blank" href="https://jenkins.autotests.cloud/job/15.Addition_to_the_cover_letter/">**Сборка в Jenkins**</a>
+<a target="_blank" href="https://jenkins.autotests.cloud/job/labirintDiplomUI/">**Сборка в Jenkins**</a>
 <p align="center">  
-<a href="https://jenkins.autotests.cloud/job/15.Addition_to_the_cover_letter/"><img src="images/JenkinsJob.png" alt="Jenkins"/></a>  
+<a href="https://jenkins.autotests.cloud/job/labirintDiplomUI/"><img src="images/JenkinsJob.png" alt="Jenkins"/></a>  
 </p>
 
 
@@ -86,7 +86,7 @@ ${TASK}
 
 ```
 
-## <img src="images/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> *Allure* <a target="_blank" href="https://jenkins.autotests.cloud/job/15.Addition_to_the_cover_letter/32/allure/">*отчёт*</a>
+## <img src="images/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> *Allure* <a target="_blank" href="https://jenkins.autotests.cloud/job/labirintDiplomUI/44/allure/">*отчёт*</a>
 ___
 
 ### *Основная страница отчёта*
@@ -108,7 +108,7 @@ ___
 </p>
 
 ___
-## <img src="images/logo/Allure_TO.svg" width="25" height="25"  alt="Allure"/></a>*Интеграция с* <a target="_blank" href="https://allure.autotests.cloud/project/1430/dashboards">*Allure TestOps*</a>
+## <img src="images/logo/Allure_TO.svg" width="25" height="25"  alt="Allure"/></a>*Интеграция с* <a target="_blank" href="https://allure.autotests.cloud/project/1721/dashboards">*Allure TestOps*</a>
 
 ## *Allure TestOps Dashboard*
 
@@ -123,7 +123,7 @@ ___
 </p>
 
 ___
-## <img src="images/logo/Jira.svg" width="25" height="25"  alt="Allure"/></a>*Интеграция с* <a target="_blank" href="https://jira.autotests.cloud/browse/AUTO-1175">Jira</a>
+## <img src="images/logo/Jira.svg" width="25" height="25"  alt="Allure"/></a>*Интеграция с* <a target="_blank" href="https://jira.autotests.cloud/browse/AUTO-1450">Jira</a>
 
 <p align="center">  
 <img title="Jira" src="images/Jira.png">  
